@@ -2,31 +2,46 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Dicee</title>
+    <title>Dice</title>
+
+    <!-- Stylesheet and Google Fonts -->
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 
+    <!-- Using defer to add JS script to <head> to increase performance -->
+
+    <script defer src="index.js"></script>
   </head>
   <body>
 
     <div class="container">
-      <h1>Refresh Me</h1>
+      <h1>Feeling Lucky?</h1>
+
+      <!-- Setting intial display images -->
 
       <div class="dice">
+          <img class="img1" src="https://media0.giphy.com/media/zOBNuuMuNQUTz438eO/giphy.gif?cid=ecf05e479n4yn0nhn2u230qlt4164223o0msq39q6u0u3u9u&rid=giphy.gif&ct=s" alt="dice">
         <p>Player 1</p>
-        <img class="img1" src="images/dice6.png">
       </div>
 
       <div class="dice">
+          <img class="img2" src="https://media0.giphy.com/media/zOBNuuMuNQUTz438eO/giphy.gif?cid=ecf05e479n4yn0nhn2u230qlt4164223o0msq39q6u0u3u9u&rid=giphy.gif&ct=s" alt="dice">
         <p>Player 2</p>
-        <img class="img2" src="images/dice6.png">
       </div>
 
     </div>
 
-    <script src="index.js" charset="utf-8"></script>
+    <!-- Button to reload the page instead of having to do it manually -->
 
-      </body>
+    <button class="btn" onClick="window.location.reload();">Roll The Dice</button>
 
-      
-    </html>
+  </body>
+
+  <footer>
+    www 🎲 addictioncenter 🎲 com
+  </footer>
+</html>
