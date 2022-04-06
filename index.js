@@ -1,29 +1,29 @@
+// Using window.performance.navigation.type to only run the rollDice function once the button has been clicked (page has been reloaded)
 
-var randomNumber1 = Math.floor(Math.random() * 6) + 1; //1-6
-
-var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
-
-var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
-
-var image1 = document.querySelectorAll("img")[0];
-
-image1.setAttribute("src", randomImageSource);
-
-
-var randomNumber2 = Math.floor(Math.random() * 6) + 1;
-
-var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
-
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
-
-
-//If player 1 wins
-if (randomNumber1 > randomNumber2) {
-  document.querySelector("h1").innerHTML = "Play 1 Wins!";
+if (window.performance.navigation.type === 1) {
+  rollDice();
 }
-else if (randomNumber2 > randomNumber1) {
-  document.querySelector("h1").innerHTML = "Player 2 Wins!";
+ 
+// Function that creates a random number between 1 and 6 to randommly pick a numbered dice image
+
+function rollDice() {
+  var randomNumber1 = `images/dice${Math.floor(Math.random() * 6) + 1}.png`;
+  var randomNumber2 = `images/dice${Math.floor(Math.random() * 6) + 1}.png`;
+ 
+  document.querySelector(".img1").setAttribute("src", randomNumber1);
+  document.querySelector(".img2").setAttribute("src", randomNumber2);
+ 
+  changeTitle(randomNumber1, randomNumber2);
 }
-else {
-  document.querySelector("h1").innerHTML = "Draw!";
+ 
+// Function that chooses a title for the page based on which player won
+
+function changeTitle(num1, num2) {
+  if (num1 === num2) {
+    document.querySelector("h1").innerHTML = "Draw!";
+  } else if (num1 > num2) {
+    document.querySelector("h1").innerHTML = "🔻 Player 1 Wins!";
+  } else {
+    document.querySelector("h1").innerHTML = "Player 2 Wins! 🔻";
+  }
 }
