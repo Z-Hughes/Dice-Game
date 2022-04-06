@@ -9,7 +9,8 @@ CSS (3)
 JavaScript (ES6) 
 
 Skills Implemented: 
-Selecting HTML elements with JS 
-Manipulating and changing styles of HTML elements with JS 
-Manipulating HTMl element attributes with JS 
-Manipulating text with JS 
+ 
+Selecting HTML elements with JS   
+Manipulating and changing styles of HTML elements with JS   
+Manipulating HTMl element attributes with JS   
+Manipulating text with JS   
