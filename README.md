@@ -1,6 +1,8 @@
 # Dice-Game 
 
-Interactive dice game. This project's focus is on DOM manipulation. 
+Interactive dice game.
+
+View Live Site: https://lucky-you.herokuapp.com/
 
 Project Technologies: 
 
